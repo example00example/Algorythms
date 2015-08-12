@@ -2,6 +2,7 @@
 
 //#include "LongArithmetics/LongInt.h"
 #include "Sortings/MergeSort.h"
+#include "Sortings/BinarySearch.h"
 
 int main() {
     ssize_t size;
@@ -11,8 +12,10 @@ int main() {
         std::cin >> data[i];
 
     MergeSort(data);
-    for (auto cur: data)
-        std::cout << cur << ' ';
+
+    int val;
+    std::cin >> val;
+    std::cout << BinarySearch(data, val);
 
     return 0;
 }
