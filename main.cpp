@@ -2,7 +2,9 @@
 
 //#include "LongArithmetics/LongInt.h"
 #include "Sortings/MergeSort.h"
-#include "Sortings/BinarySearch.h"
+//#include "Sortings/BinarySearch.h"
+#include "Tasks/2_3_7.h"
+#include "Divide and Conquer/MaxSubarray.h"
 
 int main() {
     ssize_t size;
@@ -15,7 +17,8 @@ int main() {
 
     int val;
     std::cin >> val;
-    std::cout << BinarySearch(data, val);
+    auto result = SearchOfSum(data, val);
+    std::cout << "(" << result.first << ", " << result.second << ")" << std::endl;
 
     return 0;
 }
